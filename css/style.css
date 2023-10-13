@@ -1,0 +1,40 @@
+body {
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: -webkit-radial-gradient(circle, #028887, #16113A);
+  background-image: -moz-radial-gradient(circle, #028887, #16113A);
+  background-image: radial-gradient(circle, #028887, #16113A);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body, html {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 50vw; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.top-right-contact {
+  display: flex; /* Ajouté pour s'assurer que les éléments à l'intérieur s'affichent horizontalement */
+  gap: 10px; /* Espace entre les éléments à l'intérieur du .top-right-contact */
+}
+
+.top-right-contact>a {
+  background-color: #ffffff;
+  color: #5377ee;
+  padding: 2px 2px;
+}
