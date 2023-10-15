@@ -89,6 +89,7 @@ header > * {
   margin-left: 10px;
   text-shadow: #00000040 0px 0px 5px 0px;
   text-decoration: none;
+  letter-spacing: 0.05em;
 }
 
 .bar-logo-text:hover {
@@ -256,5 +257,6 @@ main {
   padding: 5px 10px; 
   font-family: 'cocogoose', sans-serif;
   text-shadow: #000000 0px 0px 25px;
+  letter-spacing: 0.05em;
 }
 
