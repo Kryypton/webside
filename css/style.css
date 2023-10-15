@@ -10,21 +10,26 @@
 @keyframes slideUpImage {
   from {
     transform: translateY(100%);
-  }
-  to {
+  } to {
     transform: translateY(0);
   }
 }
 
 @keyframes slideUpH1 {
   from {
-    transform: translateY(500%) translateX(-50%);
-  }
-  to {
-    transform: translateX(-50%) translateY(35%);
+    transform: translateX(-50%) translateY(500%);
+  } to {
+    transform: translateX(-50%) translateY(15%);
   }
 }
 
+@keyframes slideUpP {
+  from {
+    transform: translateX(-50%) translateY(500%);
+  } to {
+    transform: translateX(-50%) translateY(-275%);
+  }
+}
 
 body {
   background-repeat: no-repeat;
@@ -248,15 +253,27 @@ main {
   display: block;
 }
 
-.attention-grabber h1 {
+.attention-grabber div {
   animation: slideUpH1 0.75s forwards;
   position: absolute; 
   left: 50%;
-  transform: translateX(-50%) translateY(35%);
   color: #ffffff; 
   padding: 5px 10px; 
   font-family: 'cocogoose', sans-serif;
   text-shadow: #000000 0px 0px 25px;
+  letter-spacing: 0.25em;
+}
+
+.attention-grabber div p {
+  animation: slideUpP 1.25s forwards;
+  position: absolute; 
+  left: 50%;
+  color: #ffffff; 
+  padding: 5px 10px; 
+  font-family: 'roboto', arial, sans-serif;
+  text-shadow: #000000 0px 0px 25px;
   letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-align: center;
 }
 

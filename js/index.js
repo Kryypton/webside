@@ -7,6 +7,7 @@ let decreasing = true;
 
 const bodyElement = document.body;
 const h1Element = document.querySelector('.attention-grabber h1');
+const pElement = document.querySelector('.attention-grabber p');
 const imgElement = document.querySelector('.attention-grabber img');
 
 function setGradient() {
@@ -45,9 +46,10 @@ function adjustOpacity() {
 function adjustFontSize() {
     var imageHeight = imgElement.offsetHeight;
     
-    var fontSize = 1.5 * imageHeight;
+    var fontSize = 2 * imageHeight;
     
     h1Element.style.fontSize = fontSize + "%";
+    pElement.style.fontSize = fontSize / 8 + "%";
 }
 
 window.onload = adjustFontSize;
