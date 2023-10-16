@@ -59,7 +59,6 @@ header {
   top: 0;
   transition: background-color 0.3s;
   z-index: 1000;
-  padding-bottom: 2vh;
 }
 
 header, 
