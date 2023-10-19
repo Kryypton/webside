@@ -54,7 +54,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   position : fixed;
   top: 0;
   transition: background-color 0.3s;
@@ -234,7 +234,8 @@ aside nav ul {
 }
 
 main {
-  margin-top: 40%;
+  margin-top: 80vh;
+  gap: 2vh;
 }
 
 .attention-grabber {
@@ -244,6 +245,7 @@ main {
   align-items: center;
   top: 0;
   height: 50vh;
+  width: 40vw;
 }
 
 .attention-grabber img {
@@ -276,3 +278,94 @@ main {
   text-align: center;
 }
 
+.flow-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.flow-buttons div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  margin-top: 15px;
+  width: 40%;
+  height: 40%;
+  background-color: #0E76A8;
+  border: 4px solid #0E76A8; 
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.flow-buttons div:hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  margin-top: 15px;
+  width: 40%;
+  height: 40%;
+  background-color: #ffffff;
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.flow-buttons div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  margin-top: 15px;
+  width: 40%; 
+  height: 40%;
+  background-color: transparent;
+  border: 4px solid #0E76A8;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.flow-buttons div:first-child:hover {
+  border: 4px solid #d5dcdf; 
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.flow-buttons div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-family: 'roboto', sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 100%;
+}
+
+.flow-buttons div a:hover {
+  background-color: #ffffff;
+  color: #0E76A8;
+  transition: all 0.2s ease-in-out;
+}
+
+.flow-buttons div a:first-child:hover {
+  color: #0E76A8;
+  transition: all 0.2s ease-in-out;
+  border-color: #ffffff;
+}
+
+
+.actual-flow {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
