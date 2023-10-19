@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 @font-face {
   font-family: 'cocogoose';
   src: url('../fonts/cocogoose/cocogoose.ttf') format('truetype');
@@ -5,29 +7,45 @@
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
-
 @keyframes slideUpImage {
-  from {
-    transform: translateY(100%);
-  } to {
-    transform: translateY(0);
-  }
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes slideUpH1 {
   from {
-    transform: translateY(500%);
+    opacity: 0;
+    transform: translateY(100vh);
   } to {
+    opacity: 1;
     transform: translateY(15%);
   }
 }
 
 @keyframes slideUpP {
   from {
-    transform: translateY(500%);
+    opacity: 0;
+    transform: translateY(100vh);
   } to {
+    opacity: 1;
     transform: translateY(500%);
+  }
+}
+
+@keyframes upAndDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5%); }
+}
+
+@keyframes scrollAnimation {
+  0% {
+      transform: translateX(0%);
+  }
+  50% {
+      transform: translateX(calc(100%/4));
+  }
+  100% {
+      transform: translateX(0%);
   }
 }
 
@@ -261,13 +279,12 @@ main {
 }
 
 .attention-grabber img {
-  animation: slideUpImage 0.5s forwards;
+  animation: slideUpImage 0.75s forwards;
   height: 100%;
   display: flex;
 }
 
 .attention-grabber div {
-  animation: slideUpH1 0.75s forwards;
   display: flex;
   position: absolute; 
   justify-content: center;
@@ -276,6 +293,7 @@ main {
 }
 
 .attention-grabber div h1 {
+  animation: slideUpH1 1s forwards;
   color: #ffffff; 
   padding: 5px 10px; 
   font-family: 'cocogoose', arial, sans-serif;
@@ -288,11 +306,10 @@ main {
 }
 
 .attention-grabber div p {
-  animation: slideUpP 1.25s forwards;
+  animation: slideUpP 1.50s forwards;
   position: absolute; 
   display: flex;
   justify-content: end;
-  bottom: 50%;
   align-items: center;
   color: #ffffff; 
   padding: 5px 10px; 
@@ -308,7 +325,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
   width: 40vw;
 }
 
@@ -387,11 +404,42 @@ main {
   border-color: #ffffff;
 }
 
-
 .actual-flow {
-  background-color: #ffffff;
+  background-color: #ffffff40;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 40vw;
+  border-radius: 10px;
+}
+
+.scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  width: 300%; /* 3 divs visibles à la fois */
+  overflow: hidden; /* Cache les divs en dehors de la vue */
+  white-space: nowrap; /* Empêche les divs de se casser à la ligne suivante */
+  border: 1px solid black; /* Pour visualiser la zone visible */
+}
+
+.scroll-content {
+  display: inline-block;
+  animation: scrollAnimation 35s linear infinite;
+  width: 100%; /* 1 div visible à la fois */
+}
+
+.item {
+  width: calc(100% / 4); /* Divisez la largeur totale par 7 pour chaque div */
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid red; /* Pour visualiser chaque div */
+  text-align: center;
+  font-size: 24px;
+}
+
+.scroll-content:hover {
+  animation-play-state: paused;
 }

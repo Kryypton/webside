@@ -6,10 +6,22 @@ let opacity = 1;
 let decreasing = true;
 
 const bodyElement = document.body;
+const imageAttentionGrabber = document.querySelector(".attention-grabber img");
 
 function setGradient() {
     bodyElement.style.backgroundImage = `radial-gradient(circle at ${currentX}% ${currentY}%, rgba(0, 124, 124, ${opacity}), #16113A)`;
 }
+
+function setUpAndDownAnimationImage() {
+    setTimeout(() => {
+        const imageAttentionGrabber = document.querySelector(".attention-grabber img");
+        if (imageAttentionGrabber) {
+            imageAttentionGrabber.style.animation = "upAndDown 3s ease-in-out infinite";
+        }
+    }, 750); 
+}
+
+window.onload = setUpAndDownAnimationImage;
 
 function updateGradientPosition() {
     currentX += deltaX;
@@ -60,3 +72,4 @@ window.addEventListener("scroll", function() {
     }
   });
   
+setUpAndDownAnimationImage();
