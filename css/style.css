@@ -404,7 +404,7 @@ main {
   border-color: #ffffff;
 }
 
-.actual-flow {
+.content {
   background-color: #ffffff40;
   display: flex;
   justify-content: center;
@@ -412,34 +412,40 @@ main {
   height: 100vh;
   width: 40vw;
   border-radius: 10px;
+  overflow: visible; /* S'assurer que le contenu dépassant est visible */
+  position: relative; /* Position relative pour centrer grid-container */
 }
 
-.scroll-container {
-  display: flex;
-  align-items: center;
-  justify-content:start;
-  width: 300%; /* 3 divs visibles à la fois */
-  overflow: hidden; /* Cache les divs en dehors de la vue */
-  white-space: nowrap; /* Empêche les divs de se casser à la ligne suivante */
-  border: 1px solid black; /* Pour visualiser la zone visible */
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 10px;
+    width: 125%; /* 50% de plus que sa taille originale */
+    height: 85%;
+
+    /* Pour centrer par rapport au parent */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.scroll-content {
-  display: inline-block;
-  animation: scrollAnimation 35s linear infinite;
-  width: 100%; /* 1 div visible à la fois */
+.row {
+    display: flex;
+    gap: 10px;
 }
 
-.item {
-  width: calc(100% / 4); /* Divisez la largeur totale par 7 pour chaque div */
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 20px;
-  border: 1px solid red; /* Pour visualiser chaque div */
-  text-align: center;
-  font-size: 24px;
+.item, .item-center {
+    flex: 1;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ffff;
+    border-radius: 10px;
+    height: 100%;
 }
 
-.scroll-content:hover {
-  animation-play-state: paused;
+.item-center {
+    /* Ici, vous pouvez ajouter des styles supplémentaires si vous le souhaitez */
 }
