@@ -6,9 +6,6 @@ let opacity = 1;
 let decreasing = true;
 
 const bodyElement = document.body;
-const h1Element = document.querySelector('.attention-grabber h1');
-const pElement = document.querySelector('.attention-grabber p');
-const imgElement = document.querySelector('.attention-grabber img');
 
 function setGradient() {
     bodyElement.style.backgroundImage = `radial-gradient(circle at ${currentX}% ${currentY}%, rgba(0, 124, 124, ${opacity}), #16113A)`;
@@ -42,18 +39,6 @@ function adjustOpacity() {
     opacity = Math.max(1, Math.min(2, opacity));
     setGradient();
 }
-
-function adjustFontSize() {
-    var imageHeight = imgElement.offsetHeight;
-    
-    var fontSize = 2 * imageHeight;
-    
-    h1Element.style.fontSize = fontSize + "%";
-    pElement.style.fontSize = fontSize / 8 + "%";
-}
-
-window.onload = adjustFontSize;
-window.addEventListener('resize', adjustFontSize);
 
 function loop() {
     updateGradientPosition();

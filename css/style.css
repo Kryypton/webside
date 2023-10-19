@@ -17,17 +17,17 @@
 
 @keyframes slideUpH1 {
   from {
-    transform: translateX(-50%) translateY(500%);
+    transform: translateY(500%);
   } to {
-    transform: translateX(-50%) translateY(15%);
+    transform: translateY(15%);
   }
 }
 
 @keyframes slideUpP {
   from {
-    transform: translateX(-50%) translateY(500%);
+    transform: translateY(500%);
   } to {
-    transform: translateX(-50%) translateY(-275%);
+    transform: translateY(500%);
   }
 }
 
@@ -43,10 +43,14 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0; 
+  padding: 0;
 }
 
-body, html {
+html {
+  margin: 0;
+  padding: 0;
   height: 100vh;
+  font-size: 14px;
 }
 
 header {
@@ -69,6 +73,14 @@ header > * {
     padding: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 10vh;
+}
 
 .top-bar {
   display: flex;
@@ -234,7 +246,7 @@ aside nav ul {
 }
 
 main {
-  margin-top: 80vh;
+  margin-top: 10vh;
   gap: 2vh;
 }
 
@@ -251,29 +263,43 @@ main {
 .attention-grabber img {
   animation: slideUpImage 0.5s forwards;
   height: 100%;
-  display: block;
+  display: flex;
 }
 
 .attention-grabber div {
   animation: slideUpH1 0.75s forwards;
+  display: flex;
   position: absolute; 
-  left: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px; 
+}
+
+.attention-grabber div h1 {
   color: #ffffff; 
   padding: 5px 10px; 
-  font-family: 'cocogoose', sans-serif;
+  font-family: 'cocogoose', arial, sans-serif;
   text-shadow: #000000 0px 0px 25px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 10vw;
+  margin-top: 5vh;
 }
 
 .attention-grabber div p {
   animation: slideUpP 1.25s forwards;
   position: absolute; 
-  left: 50%;
+  display: flex;
+  justify-content: end;
+  bottom: 50%;
+  align-items: center;
   color: #ffffff; 
   padding: 5px 10px; 
   font-family: 'roboto', arial, sans-serif;
   text-shadow: #000000 0px 0px 25px;
   letter-spacing: 0.05em;
+  font-size: 1.5vw;
   white-space: nowrap;
   text-align: center;
 }
@@ -282,12 +308,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 20vh;
+  width: 40vw;
 }
 
 .flow-buttons div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 5%;
   margin-top: 15px;
@@ -346,7 +372,7 @@ main {
   transition: all 0.2s ease-in-out;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-size: 100%;
+  font-size: calc(0.5em + 0.75vw);
 }
 
 .flow-buttons div a:hover {
