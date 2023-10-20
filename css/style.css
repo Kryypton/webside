@@ -388,13 +388,31 @@ main {
   width: 100%;
   height: 100%;
   color: #ffffff;
-  font-family: 'roboto', sans-serif;
-  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-size: calc(0.5em + 0.75vw);
+  font-size: calc(1.2em + 0.15vw);
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1280px) {
+  .flow-buttons div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: calc(0.7em);
+    white-space: nowrap;
+  }
 }
 
 .flow-buttons div a:hover {
