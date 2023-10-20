@@ -7,6 +7,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'cocogoose-light';
+  src: url('../fonts/cocogoose/Cocogoose\ Pro\ Light-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @keyframes slideUpImage {
   0% { transform: translateY(100vh); }
   100% { transform: translateY(0%); }
@@ -459,46 +466,59 @@ main {
 }
 
 .item, .item-center {
-    flex: 1;
-    background-color: #e0e0e0;
-    display: flex;
-    border: 1px solid #ffff;
-    border-radius: 10px;
-    height: 100%;
+  flex-direction: column; 
+  flex: 1;
+  background-color: #e0e0e0;
+  display: flex;
+  border: 1px solid #ffff;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: #00000040 0px 0px 5px 0px;
+}
+
+.item:hover, .item-center:hover {
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  overflow: visible;
+  transform: scale(1.1);
+  box-shadow: #00000040 0px 0px 50px 0px;
 }
 
 .item-center img {
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-bottom: 1%;
-  margin-right: 1%;
-  width: 98%;
+  margin-top: 0.5%;
+  margin-left: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: 0.5%;
+  width: 99%;
   height: fit-content;
   border-radius: 8px;
 }
 
-.item-center:nth-child(2) img { 
-  display: flex;
-  justify-content: center;
-  align-self: flex-end;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-bottom: 1%;
-  margin-right: 1%;
-  width: 98%;
-  height: fit-content;
-  border-radius: 8px;
-}
-
-.item-center h1 {
-  font-family: 'Roboto', arial, sans-serif;
+.item-center h3 {
+  font-family: 'Cocogoose-light', arial, sans-serif;
   font-size: 1.5em;
+  font-weight: 500;
   color: #0E76A8;
   text-shadow: #00000040 0px 0px 5px 0px;
   text-decoration: none;
   letter-spacing: 0.05em;
-  white-space: nowrap;
-  text-align: center;
-  margin-top: 4%;
-  margin-left: 4%;
+  margin-top: 6%;
+  margin-left: 6%;
+}
+
+.item-center div {
+  width: 88%;
+}
+
+.item-center p {
+  font-family: 'Cocogoose-light', arial, sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #094d6d;
+  text-shadow: #00000040 0px 0px 5px 0px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  margin-left: 6%;
+  width: 88%;
+  text-justify:auto;
 }
