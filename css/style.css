@@ -69,13 +69,16 @@ body {
   align-items: center;
   margin: 0; 
   padding: 0;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 html {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 14px;
+  flex-direction: column;
 }
 
 header {
@@ -105,6 +108,7 @@ main {
   justify-content: center;
   width: 100vw;
   margin-top: 10vh;
+  flex-grow: 1;
 }
 
 .top-bar {
@@ -450,13 +454,14 @@ main {
 
 .grid-container {
     display: grid;
-    grid-template-rows: 0.5fr 2fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr;
     gap: 10px;
     width: 120%; /* 50% de plus que sa taille originale */
-    height: 80%;
+    height: 90%;
 
     /* Pour centrer par rapport au parent */
     position: absolute;
+
 }
 
 .row {
@@ -509,7 +514,7 @@ main {
   margin-top: 6%;
   margin-left: 6%;
   width: 100%;
-  text-align:inherit ;
+  text-align: inherit ;
 }
 
 .item div p {
@@ -531,10 +536,10 @@ main {
   flex: 1;
   background-color: #e0e0e0;
   display: flex;
-
   border-radius: 10px;
   height: 100%;
   box-shadow: #00000040 0px 0px 5px 0px;
+  overflow: hidden; /* Ajouté pour s'assurer que le contenu ne dépasse pas */
 }
 
 .item:hover, .item-center:hover {
@@ -545,7 +550,7 @@ main {
   box-shadow: #00000040 0px 0px 50px 0px;
 }
 
-.item-center img {
+.miniature {
   margin-top: 0.5%;
   margin-left: 0.5%;
   margin-bottom: 0.5%;
@@ -569,9 +574,7 @@ main {
   text-align:inherit ;
 }
 
-.item-center div {
-  width: 88%;
-}
+
 
 .item-center p {
   font-family: 'Cocogoose-light', arial, sans-serif;
@@ -586,10 +589,108 @@ main {
   text-align: justify;
 }
 
+
+
 .row-b div {
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px;
   width: 99%;
   height: 99%;
   background-image: url('./Kayle_3.jpg');
   background-size: cover; /* Garde les proportions de l'image */
   background-position: center; /* Centre l'image dans le conteneur */
+}
+
+.icon-container {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: start;
+  margin-top: auto; /* Ajouté pour pousser les icônes vers le bas */
+  padding-bottom: 5%;
+}
+
+.icon-container img {
+  display: flex;
+  align-self: flex-end;
+  width: auto;
+  height: 12.5%;
+  margin-right: 3%;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #0E76A8;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: #00000040 0px 0px 5px 0px;
+  transition: all 0.2s ease-in-out;
+  margin-top: 2%;
+}
+
+.container {
+  width: 80%;
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.2);
+}
+
+.header {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.main-content {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.left-section {
+  flex: 2;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #999;
+}
+
+.right-section {
+  flex: 1;
+}
+
+.top-box, .bottom-box {
+  padding: 1rem;
+  border: 1px solid #eee;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
