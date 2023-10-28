@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+@font-face {
+  font-family: 'cocogoose';
+  src: url('../fonts/cocogoose/cocogoose.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cocogoose-light';
+  src: url('../fonts/cocogoose/Cocogoose\ Pro\ Light-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.attention-grabber div h1 {
+  font-size: 6vw;
+}
+
+.main-content {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5vw;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.constellation-box {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.constellation {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #000;
+  left: -50%;
+  top: 0;
+  transition: transform 0.5s;
+}
+
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  /* Vous pouvez ajuster la position de chaque étoile avec 'top' et 'left' */
+}
+
+.star-info {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
