@@ -63,20 +63,13 @@ body {
   background-image: -webkit-radial-gradient(circle, #007c7c, #0f0b29);
   background-image: -moz-radial-gradient(circle, #007c7c, #0f0b29);
   background-image: radial-gradient(circle, #007c7c, #0f0b29);
-
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0; 
-  padding: 0;
-  min-height: 100vh;
   flex-direction: column;
 }
 
 html {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
   font-size: 14px;
   flex-direction: column;
 }
@@ -86,14 +79,47 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   position : fixed;
   top: 0;
+
   transition: background-color 0.3s;
   z-index: 1000;
+
 }
 
-header, 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1%;
+  padding: 1%;
+  background-color: #0E76A8;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: small;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: #00000040 0px 0px 5px 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+
 .attention-grabber,
 .attention-grabber > *,
 header > * {
@@ -123,8 +149,8 @@ main {
 .top-bar div {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 15%;
+  justify-content: center;
+  gap: 10%;
 }
 
 .bar-logo-text {
@@ -178,7 +204,7 @@ main {
 }
 
 .linked-inn-button img {
-  align-self: start;
+  display: flex;
   align-items: center;
   margin-right: 5px;
   width: 15px;
@@ -275,7 +301,7 @@ aside nav ul {
 }
 
 main {
-  margin-top: 10vh;
+  margin-top: 2vh;
   gap: 2vh;
 }
 
@@ -293,7 +319,7 @@ main {
 .attention-grabber img {
   z-index: -1;
   animation: slideUpImage 0.75s forwards;
-  width: 35%;
+  width: 40%;
   height: fit-content;
   display: flex;
   align-self: center;
@@ -361,13 +387,6 @@ main {
 }
 
 .flow-buttons div:hover {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5%;
-  margin-top: 15px;
-  width: 40%;
-  height: 40%;
   background-color: #ffffff;
   border: 4px solid #ffffff;
   border-radius: 5px;;
@@ -375,13 +394,6 @@ main {
 }
 
 .flow-buttons div:first-child {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5%;
-  margin-top: 15px;
-  width: 40%; 
-  height: 40%;
   background-color: transparent;
   border: 4px solid #0E76A8;
   border-radius: 5px;;
@@ -389,7 +401,7 @@ main {
 }
 
 .flow-buttons div:first-child:hover {
-  border: 4px solid #d5dcdf; 
+  border: 4px solid #ffffff; 
   border-radius: 5px;;
   transition: all 0.2s ease-in-out;
 }
@@ -406,25 +418,44 @@ main {
   transition: all 0.2s ease-in-out;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-size: calc(1.2em + 0.15vw);
+  font-size: 1.1em;
   white-space: nowrap;
 }
 
 @media screen and (max-width: 1280px) {
+  .top-bar {
+    width: 70vw;
+  }
+
   .flow-buttons div a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    font-size: calc(0.7em);
+    font-size: 0.8em;
     white-space: nowrap;
+  }
+
+  .flow-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .flow-buttons div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    margin-top: 15px;
+    width: 100%;
+    height: 40%;
+    background-color: #0E76A8;
+    border: 4px solid #0E76A8; 
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -456,6 +487,7 @@ main {
   display: grid;
   gap: 10px;
   width: 120%;
+  height: 80%;
   position: absolute;
 }
 
@@ -617,21 +649,5 @@ main {
   margin-right: 3%;
 }
 
-footer {
-  position: relative;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: #0E76A8;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: small;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: #00000040 0px 0px 5px 0px;
-  transition: all 0.2s ease-in-out;
-  margin-top: 2%;
-}
+
 
