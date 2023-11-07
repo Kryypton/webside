@@ -134,6 +134,7 @@ main {
   justify-content: center;
   width: 100vw;
   margin-top: 10vh;
+  margin-bottom: 5%;
   flex-grow: 1;
 }
 
